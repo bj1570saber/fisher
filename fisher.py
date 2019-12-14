@@ -1,19 +1,22 @@
 from flask import Flask
+from config import DEBUG
 
-app = Flask(__name__) # default project name
-        #'/hello' will be fine
-@app.route('/hello/') # redirect；unique url -> better for SEO,
-# A file has multiple url will be mark as cheating search engine.
-# That's why unique url is important. Flask will redirect the correct url
-def hello(): # simple view function: http://127.0.0.1:5000/hello
-    return 'Hello, visitor. with debug mode'
+app = Flask(__name__)
 
-# another way to direct a page: app.add_url_rule()
+@app.route('/hello')
+def hello():
+    return '<html><body><h1>love</h1></body></html>'
+'''
+ also return other info:
+ status code 200, 404, 301...
+ content-type http headers, default: text/html
+ 
+ '''
+
 def greeting():
     return 'Welcome to greeting page.'
 
-app.add_url_rule('/greeting', view_func=greeting)
-# http://127.0.0.1:5000/greeting
+if __name__ == '__main__':
+    app.run(host = '0.0.0.0', debug = DEBUG, port = 5000)
 
-app.run(debug = True)
 
