@@ -1,20 +1,15 @@
 from flask import Flask, make_response
 from config import DEBUG
-
+from helper import is_isbn_or_key
 app = Flask(__name__)
 
 @app.route('/book/search/<q>/<page>')
-def search(q,page): # parameters: q(isbn -> q): keyword || isbn ; # page (start, count):
-    # isbn13: 13 digits
-    # isbn10: 10 digits & -
-    isbn_or_key = 'key'
-
-    if len(q) == 13 and q.isdigit():
-        isbn_or_key = 'isbn'
-
-    short_q = q.replace('-', '')
-    if '-' in q and len(short_q) == 10 and short_q.isdigit:
-        isbn_or_key = 'isbn'
+def search(q,page):
+    '''
+    q(isbn -> q): keyword || isbn ;
+    page (start, count):
+    '''
+    isbn_or_key = is_isbn_or_key(q) # return 'key' or 'isbn'
 
     pass
 
