@@ -1,7 +1,9 @@
 from flask import jsonify
+from fisher import app
 from helper import is_isbn_or_key
 from yushu_book import YuShuBook
-from fisher import app
+
+print('book_1: ', id(app))
 
 
 @app.route('/book/search/<q>/<page>')

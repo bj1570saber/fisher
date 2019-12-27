@@ -1,2 +1,2 @@
 # must all uppaer case
-DEBUG = True
+DEBUG = False
