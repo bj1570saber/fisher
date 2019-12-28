@@ -1,12 +1,15 @@
 from flask import jsonify
-from fisher import app
+from flask import Blueprint
+
 from helper import is_isbn_or_key
 from yushu_book import YuShuBook
 
-print('book_1: ', id(app))
+# print('book_1: ', id(app)) # for debug
+# blueprint -> resolve cyclical import
+web = Blueprint('web', __name__)
 
 
-@app.route('/book/search/<q>/<page>')
+@web.route('/book/search/<q>/<page>')  # http://0.0.0.0:5000/book/search/9787501524044/1
 def search(q, page):
     """
     q(isbn -> q): keyword || isbn ;
