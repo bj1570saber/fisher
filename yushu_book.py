@@ -7,7 +7,7 @@ class YuShuBook:
 
     @staticmethod
     def search_by_isbn(isbn):
-        url = YuShuBook.isbn_url.format(isbn)  # or self.isbn_url.format(isbn)
+        url = YuShuBook.isbn_url.format(isbn)
         result = HTTP.get(url)  # return format: Json by default parameter
         #  dict
         return result

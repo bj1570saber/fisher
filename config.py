@@ -1,2 +1,4 @@
-# must all uppaer case
+# must all upper case
+
 DEBUG = False
+
