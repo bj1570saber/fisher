@@ -33,6 +33,6 @@ def search():
         #  return json.dumps(result), 200, {'content-type':'application/json'}
         return jsonify(result)  # flask-jsonify()
     else:
-        return jsonify({'msg':'Invalid parameters'})
+        return jsonify(form.errors)
 
 

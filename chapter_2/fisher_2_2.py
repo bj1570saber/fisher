@@ -1,5 +1,5 @@
 from flask import Flask, make_response
-from config import DEBUG
+from app.secure import DEBUG
 
 app = Flask(__name__)
 

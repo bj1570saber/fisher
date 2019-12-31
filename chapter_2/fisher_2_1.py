@@ -1,11 +1,11 @@
 from flask import Flask
-from config import DEBUG
+from app.secure import DEBUG
 
 app = Flask(__name__) # default project name
 '''
 app.config.from_object('config') # This is another way to import config variable.
 print(app.config['DEBUG'])# This key must be all upper-case letters, otherwise, error throw.
-# if config.py module does not contain DEBUG constant, this print statement will print 'False',
+# if secure.py module does not contain DEBUG constant, this print statement will print 'False',
 # because Flask has a default constant name Debug = False
 '''
 
