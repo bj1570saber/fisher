@@ -29,7 +29,7 @@ def search():
         if isbn_or_key == 'isbn':
             result = YuShuBook.search_by_isbn(q)  # return dict type
         else:
-            result = YuShuBook.search_by_keyword(q)  # return dict type
+            result = YuShuBook.search_by_keyword(q, page)  # return dict type
         #  return json.dumps(result), 200, {'content-type':'application/json'}
         return jsonify(result)  # flask-jsonify()
     else:
