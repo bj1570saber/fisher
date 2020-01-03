@@ -11,6 +11,8 @@ requests = "*"
 wtforms = "*"
 sqlalchemy = "*"
 column = "*"
+flask-sqlalchemy = "*"
+cymysql = "*"
 
 [requires]
 python_version = "3.8"

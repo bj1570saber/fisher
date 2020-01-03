@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9de05a04fe0d3c9c196e3f7e5fc94e75d394f789bc6bf2d0fd464111fb5ae086"
+            "sha256": "a79f033cc114bf1894fedb654af034390b18e4c19e90ce67180fc8acedbffd93"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -128,6 +128,13 @@
             ],
             "version": "==2.8"
         },
+        "cymysql": {
+            "hashes": [
+                "sha256:b2a20c6d5373a16590b75f149a7cb2215a6d3bb2fc856b1b75f437ccf1e716d4"
+            ],
+            "index": "pypi",
+            "version": "==0.9.14"
+        },
         "flask": {
             "hashes": [
                 "sha256:13f9f196f330c7c2c5d7a5cf91af894110ca0215ac051b5844701f2bfd934d52",
@@ -142,6 +149,14 @@
                 "sha256:f8240ec12349afe8df1db168ea7c336c4e5b0271a36982bff7394f93275f2ca9"
             ],
             "version": "==0.3.7"
+        },
+        "flask-sqlalchemy": {
+            "hashes": [
+                "sha256:0078d8663330dc05a74bc72b3b6ddc441b9a744e2f56fe60af1a5bfc81334327",
+                "sha256:6974785d913666587949f7c2946f7001e4fa2cb2d19f4e69ead02e4b8f50b33d"
+            ],
+            "index": "pypi",
+            "version": "==2.4.1"
         },
         "idna": {
             "hashes": [
@@ -206,8 +221,7 @@
         },
         "pycparser": {
             "hashes": [
-                "sha256:a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3",
-                "sha256:c0f9769b11af6e88fd8e74696e07f088f5ebdeabf29de2029e0d89d3bfed43ce"
+                "sha256:a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
             ],
             "version": "==2.19"
         },
