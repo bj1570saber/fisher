@@ -1,7 +1,8 @@
-from httper import HTTP
+from app.libs.httper import HTTP
 from flask import current_app
 
 class YuShuBook:
+    # Model Layer MVC- M
     isbn_url = 'http://t.yushu.im/v2/book/isbn/{}'
     keyword_url = 'http://t.yushu.im/v2/book/search?q={}&count={}&start={}'
     @classmethod
